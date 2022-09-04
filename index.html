@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Even">
+        <h1> Input Your Number </h1>
+        <form class="form" onsubmit="Even(); return false">
+            <a>Your number: </a><input type="number" id="num1">
+            <button>Submit</button>
+            <br>
+            <a>Your Result: <h3 id="result"></h3></a>
+            <p>If your Answer is <b>0 its Even Number else Its Even Number</b></p>
+        </form>
+    </div>
+    <script>
+         function Even() {
+            let num1 = +document.querySelector("#num1").value;
+
+            let result = num1 %2;
+           
+            console.log("Num1: ", num1);
+            document.querySelector("#result").innerHTML = result;
+            console.log("If Your Number is 0 its EVEN and Its Return 1 its ODD: ", result);
+        }
+    </script>
+</body>
+</html>
